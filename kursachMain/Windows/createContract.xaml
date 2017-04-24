@@ -1,0 +1,31 @@
+﻿<Window x:Class="kursachMain.Windows.createContract"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursachMain.Windows"
+        mc:Ignorable="d"
+        Title="createContract" Height="1178.049" Width="739.382">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="202,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Номер договора" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <Label Content="Дата заключения" HorizontalAlignment="Left" Margin="21,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="202,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Ф.И.О исполнителя" HorizontalAlignment="Left" Margin="20,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="161"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="202,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Должность исполнителя" HorizontalAlignment="Left" Margin="20,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="202,222,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Название предприятия" HorizontalAlignment="Left" Margin="20,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,282,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Ученая степень" HorizontalAlignment="Left" Margin="20,342,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,341,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Звание" HorizontalAlignment="Left" Margin="20,402,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,400,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Серия паспорта" HorizontalAlignment="Left" Margin="20,462,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,461,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Номер паспорта" HorizontalAlignment="Left" Margin="20,521,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,521,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+        <Label Content="Дата выдачи" HorizontalAlignment="Left" Margin="20,581,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.039,-0.077" Height="34" Width="160"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="201,581,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
+    </Grid>
+</Window>
