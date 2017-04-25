@@ -55,7 +55,11 @@ namespace kursachMain.Windows
             con.ConnectionString = ConfigurationManager.ConnectionStrings["kursachMain.Properties.Settings.kursachConnectionString"].ConnectionString;
             con.Open();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select * from Предприятия";
+        
+            cmd.CommandText = "insert into Предприятия(ID предприятия,Название,УНП,Адрес,Телефон,Эл_почта,Контактное лицо,IDЗаключенныхДоговоров,IDНабораНаГод) Values("
+                + this.ID_Enterprise.Text + ",'" + this.Name.Text+ ",'" + this.YNP.Text + "','" 
+                + this.Addres.Text + "'," + this.Phone.Text + ",'" + this.Email.Text + 
+              ",'" + this.ID_Year_Recrutment.Text + ",'" + this.ID_Pacts.Text + "','" + this.ContactFace.Text + "','" + this.ID_Year_Recrutment.Text + ",'" + this.ID_Year_Recrutment.Text + "' )";
             cmd.Connection = con;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -95,6 +99,21 @@ namespace kursachMain.Windows
         }
 
         private void ContactFace_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ID_Enterprise_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ID_Pacts_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ID_Year_Recrutment_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
