@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Enterprises" Height="600" Width="1100" Loaded="Window_Loaded_1">
     <Grid>
-        <TabControl Margin="10" BorderThickness="0" Background="LightGray">
+        <TabControl Margin="0,5,20,15" BorderThickness="0" Background="LightGray" SelectionChanged="TabControl_SelectionChanged">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Template">
@@ -36,11 +36,8 @@
             </TabControl.Resources>
             <TabItem Header="Предприятия">
                 <Grid Height="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="61*"/>
-                        <ColumnDefinition Width="1003*"/>
-                    </Grid.ColumnDefinitions>
-                    <GroupBox Header="add Enterprise" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="700" Height="200" Grid.ColumnSpan="2">
+
+                    <GroupBox  HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="700" Height="200" Grid.ColumnSpan="2">
                         <Grid>
                             <Label Content="Название"  HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
                             <TextBox x:Name="Name"  HorizontalAlignment="Right" Height="20" Margin="0,16,398,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Addres_TextChanged"/>
@@ -54,40 +51,44 @@
                             <TextBox x:Name="Email"  HorizontalAlignment="Right" Height="20" Margin="0,121,398,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Email_TextChanged"/>
                             <Label Content="Контактное лицо"  HorizontalAlignment="Left" Margin="-6,139,0,0" VerticalAlignment="Top" Width="107"/>
                             <TextBox x:Name="ContactFace"  HorizontalAlignment="Right" Height="20" Margin="0,148,398,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="ContactFace_TextChanged"/>
-                            <Label Content="ID Предприятия"  HorizontalAlignment="Left" Margin="327,10,0,0" VerticalAlignment="Top"/>
-                            <Label Content="ID Заключенных договоров"  HorizontalAlignment="Left" Margin="327,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,0"/>
-                            <Label Content="ID Набора на год"  HorizontalAlignment="Left" Margin="327,60,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="ID_Enterprise"  HorizontalAlignment="Left" Height="23" Margin="495,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ID_Enterprise_TextChanged"/>
-                            <TextBox x:Name="ID_Pacts" HorizontalAlignment="Left" Height="23" Margin="495,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ID_Pacts_TextChanged"/>
-                            <TextBox x:Name="ID_Year_Recrutment" HorizontalAlignment="Left" Height="23" Margin="495,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ID_Year_Recrutment_TextChanged"/>
+                            <Label Content="Поиск по имени"  HorizontalAlignment="Left" Margin="309,18,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="serchByName"  HorizontalAlignment="Right" Height="20" Margin="0,23,48,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Addres_TextChanged"/>
+                            <Label Content="Поиск по Контактному лицу"  HorizontalAlignment="Left" Margin="308,48,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="serchByContactFace"  HorizontalAlignment="Right" Height="20" Margin="0,50,48,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Addres_TextChanged"/>
+                            <Button Content="go" Margin="645,22,10,150" RenderTransformOrigin="0.758,0.818" Click="Button_Click_2"/>
+                            <Button Content="go" Margin="645,49,10,123" RenderTransformOrigin="0.758,0.818"/>
+
+                            <Label  HorizontalAlignment="Left" Margin="327,60,0,0" VerticalAlignment="Top">
+
+                            </Label>
+
+
 
 
                         </Grid>
+
+
 
                     </GroupBox>
 
                     <DataGrid x:Name="EnterprisesDataGrid" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="259" Width="1050" HeadersVisibility="Column" MinColumnWidth="110.0" MaxColumnWidth="141.0" Margin="5,0,0,79" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="2"/>
                     <Button x:Name="Save" Content="Сохранить" HorizontalAlignment="Left" Margin="8,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click" AutomationProperties.Name="Save" Grid.ColumnSpan="2"/>
-                    <Button x:Name="Update" Content="Обновить" HorizontalAlignment="Left" Margin="45,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_1" AutomationProperties.Name="Update" Grid.Column="1"/>
-
+                    <Button x:Name="Update" Content="Обновить" HorizontalAlignment="Left" Margin="106,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_1" AutomationProperties.Name="Update"/>
 
                 </Grid>
 
             </TabItem>
             <TabItem Header="План набора">
                 <Grid Height="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="61*"/>
-                        <ColumnDefinition Width="1003*"/>
-                    </Grid.ColumnDefinitions>
-                    <GroupBox Header="add Enterprise" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="451" Height="200" Grid.ColumnSpan="2">
+
+                    <GroupBox Header="add plan" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="451" Height="200" Grid.ColumnSpan="2">
                         <Grid>
                             <Label Content="Год"  HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
                             <TextBox x:Name="Year"  HorizontalAlignment="Right" Height="20" Margin="0,16,109,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Addres_TextChanged"/>
                             <Label Content="Количество Студентов"  HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top"/>
                             <TextBox x:Name="CountStuds"  HorizontalAlignment="Right" Height="20" Margin="0,42,109,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="Addres_TextChanged"/>
-                        
-                        
+
+
 
 
                         </Grid>
@@ -96,7 +97,7 @@
 
                     <DataGrid x:Name="PlanDataGrid" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="259" Width="1050" HeadersVisibility="Column" MinColumnWidth="110.0" MaxColumnWidth="141.0" Margin="5,0,0,79" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="2"/>
                     <Button x:Name="SavePlan" Content="Сохранить" HorizontalAlignment="Left" Margin="8,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click" AutomationProperties.Name="Save" Grid.ColumnSpan="2"/>
-                    <Button x:Name="UpdatePlan" Content="Обновить" HorizontalAlignment="Left" Margin="45,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_1" AutomationProperties.Name="Update" Grid.Column="1"/>
+                    <Button x:Name="UpdatePlan" Content="Обновить" HorizontalAlignment="Left" Margin="106,222,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_1" AutomationProperties.Name="Update" RenderTransformOrigin="1.086,0.545"/>
 
 
                 </Grid>
@@ -105,6 +106,11 @@
 
 
             <TabItem Header="Составить договор" />
+
+
+
+
+
         </TabControl>
     </Grid>
 
